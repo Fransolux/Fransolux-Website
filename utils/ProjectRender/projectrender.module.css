@@ -1,0 +1,202 @@
+.container {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 64px 16px;
+}
+
+.headerContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headerContent > h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--black);
+  line-height: 120%;
+}
+
+.headerContent > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 150%;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info > p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 120%;
+}
+
+.fullImage,
+.explanation,
+.quote {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 16px 64px 16px;
+}
+
+.fullImage > div,
+.bentoTop > div,
+.bento > div:last-child,
+.sideBySide > div,
+.gallery > div {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px 0 #00000042;
+  overflow: hidden;
+}
+
+.explanation > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 150%;
+}
+
+.quote {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.quote > p {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 150%;
+  text-align: center;
+}
+
+.bento,
+.sideBySide,
+.gallery {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 16px 64px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bentoTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (min-width: 400px) {
+  .header {
+    padding: 64px 32px;
+  }
+
+  .bento,
+  .sideBySide,
+  .gallery,
+  .fullImage,
+  .explanation,
+  .quote {
+    padding: 0 32px 64px 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 80px 32px;
+    gap: 64px;
+  }
+
+  .bento,
+  .sideBySide,
+  .gallery,
+  .fullImage,
+  .explanation,
+  .quote {
+    padding: 0 32px 80px 32px;
+  }
+
+  .headerContent > p {
+    max-width: 450px;
+  }
+
+  .info {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .explanation > p {
+    max-width: 700px;
+  }
+
+  .quote > p {
+    max-width: 650px;
+  }
+
+  .bentoTop,
+  .sideBySide,
+  .gallery {
+    flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    padding: 80px 64px;
+  }
+
+  .bento,
+  .sideBySide,
+  .gallery,
+  .fullImage,
+  .explanation,
+  .quote {
+    padding: 0 64px 80px 64px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .headerContent > h1 {
+    font-size: 36px;
+  }
+
+  .headerContent > p,
+  .explanation > p {
+    font-size: 20px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .headerContent > p {
+    max-width: 650px;
+  }
+  .explanation > p {
+    max-width: 800px;
+  }
+
+  .quote > p {
+    font-size: 28px;
+    max-width: 850px;
+  }
+}

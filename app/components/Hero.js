@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import styles from "@/styles/modules/hero.module.css";
+import { scrollToSection } from "@/utils/Helpers";
 
 function Hero() {
   return (
@@ -20,8 +23,20 @@ function Hero() {
           </p>
         </div>
         <div className={styles.buttons}>
-          <button className="primary-cta">Trabajemos juntos</button>
-          <button className="secondary-cta">Explora mi trabajo</button>
+          <a
+            href="https://shorturl.at/RaB2f"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-cta"
+          >
+            Trabajemos juntos
+          </a>
+          <button
+            className="secondary-cta"
+            onClick={() => scrollToSection("trabajo-destacado")}
+          >
+            Explora mi trabajo
+          </button>
         </div>
       </div>
     </section>

@@ -58,8 +58,9 @@
   cursor: pointer;
 }
 
-.dropdown a {
+.dropdown li:last-child a {
   color: var(--white);
+  width: max-content;
 }
 
 .dropdown button {

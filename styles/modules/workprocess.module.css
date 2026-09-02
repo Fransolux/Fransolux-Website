@@ -1,0 +1,123 @@
+.container {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.container > h5 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 120%;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.itemIcon {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--primary);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  width: max-content;
+  height: max-content;
+}
+
+.itemContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.itemContent > span {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 120%;
+}
+
+.itemContent > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 150%;
+}
+
+@media screen and (min-width: 400px) {
+  .container {
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .container > h5 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 80px 32px;
+    gap: 64px;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 64px;
+  }
+
+  .item {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 80px 64px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .container > h5 {
+    font-size: 36px;
+  }
+
+  .itemContent > span,
+  .itemContent > p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .list {
+    justify-items: center;
+    column-gap: 0;
+    row-gap: 80px;
+  }
+
+  .item {
+    width: 750px;
+  }
+}

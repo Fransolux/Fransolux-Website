@@ -41,6 +41,10 @@ li {
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -54,18 +58,20 @@ span,
 button {
   font-family: var(--roboto);
   text-decoration: none;
+  color: var(--black);
 }
 
 .primary-cta,
 .secondary-cta {
   border: none;
   border-radius: 16px;
-  padding: 12px 24px;
+  padding: 10px 24px;
   font-size: 16px;
   font-weight: 500;
   color: var(--white);
   line-height: 120%;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .primary-cta {

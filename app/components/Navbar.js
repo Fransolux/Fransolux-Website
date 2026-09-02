@@ -4,17 +4,22 @@ import { useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 import styles from "@/styles/modules/navbar.module.css";
 
 import { scrollToSection } from "@/utils/Helpers";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const closeMenu = () => {
+  const scrollFunction = (param) => {
     setMenuOpen(false);
+    scrollToSection(param);
+    return;
   };
+
+  const isProjectsPage = pathname.startsWith("/proyectos");
 
   return (
     <header className={styles.header}>
@@ -47,27 +52,28 @@ function Navbar() {
         </button>
 
         <ul className={styles.navList}>
-          <li>
-            <button type="button" onClick={() => scrollToSection("servicios")}>
-              Trabajos
-            </button>
+          <li style={{ display: isProjectsPage ? "block" : "none" }}>
+            <Link href="/">Inicio</Link>
+          </li>
+          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+            <a href="/proyectos">Trabajos</a>
           </li>
 
-          <li>
-            <button type="button" onClick={() => scrollToSection("nosotros")}>
+          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+            <button type="button" onClick={() => scrollFunction("servicios")}>
               Servicios
             </button>
           </li>
 
-          <li>
-            <button type="button" onClick={() => scrollToSection("productos")}>
+          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+            <button type="button" onClick={() => scrollFunction("sobre-mi")}>
               Sobre mi
             </button>
           </li>
 
           <li>
             <a
-              href=""
+              href="https://shorturl.at/RaB2f"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-cta"
@@ -80,27 +86,29 @@ function Navbar() {
 
       {menuOpen && (
         <ul className={styles.dropdown}>
-          <li>
-            <button type="button" onClick={() => scrollToSection("servicios")}>
-              Trabajos
-            </button>
+          <li style={{ display: isProjectsPage ? "block" : "none" }}>
+            <Link href="/">Inicio</Link>
           </li>
 
-          <li>
-            <button type="button" onClick={() => scrollToSection("nosotros")}>
+          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+            <a href="/proyectos">Trabajos</a>
+          </li>
+
+          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+            <button type="button" onClick={() => scrollFunction("servicios")}>
               Servicios
             </button>
           </li>
 
-          <li>
-            <button type="button" onClick={() => scrollToSection("productos")}>
+          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+            <button type="button" onClick={() => scrollFunction("sobre-mi")}>
               Sobre mi
             </button>
           </li>
 
           <li>
             <a
-              href=""
+              href="https://shorturl.at/RaB2f"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-cta"

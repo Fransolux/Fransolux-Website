@@ -148,7 +148,7 @@
 
 @media screen and (min-width: 1280px) {
   .container {
-    height: 600px;
+    height: calc(100vh - 88px);
     padding: 0 64px;
   }
 
@@ -161,13 +161,11 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .container {
-    height: 700px;
-  }
-}
-
 @media screen and (min-width: 1536px) {
+  .container {
+    height: calc(100vh - 93px);
+  }
+
   .text > h1 {
     font-size: 80px;
     max-width: 740px;
