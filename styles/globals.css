@@ -84,7 +84,9 @@ button {
 
 @media screen and (min-width: 1536px) {
   a,
-  p {
+  p,
+  .primary-cta,
+  .secondary-cta {
     font-size: 20px;
   }
 }

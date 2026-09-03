@@ -45,7 +45,7 @@
 
 @media screen and (min-width: 400px) {
   .container {
-    padding: 32px;
+    padding: 32px 32px 64px 32px;
   }
 }
 
@@ -57,10 +57,10 @@
 
 @media screen and (min-width: 1024px) {
   .container {
-    padding: 80px 32px;
+    padding: 80px 80px 80px 32px;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .content {
@@ -76,7 +76,7 @@
 
 @media screen and (min-width: 1280px) {
   .container {
-    padding: 80px 64px;
+    padding: 80px 160px 80px 64px;
     gap: 128px;
   }
 
@@ -101,6 +101,12 @@
 
   .content > div > p {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 80px 412px 80px 64px;
   }
 }
 
