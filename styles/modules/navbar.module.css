@@ -46,6 +46,7 @@
 
 .dropdown li {
   padding: 16px 0;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.25);
 }
 
 .dropdown a,

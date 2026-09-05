@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "@/styles/modules/hero.module.css";
 import { scrollToSection } from "@/utils/Helpers";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -31,12 +32,13 @@ function Hero() {
           >
             Trabajemos juntos
           </a>
-          <button
+          <Link
+            href="/proyectos"
+            rel="noopener noreferrer"
             className="secondary-cta"
-            onClick={() => scrollToSection("trabajo-destacado")}
           >
             Explora mi trabajo
-          </button>
+          </Link>
         </div>
       </div>
     </section>

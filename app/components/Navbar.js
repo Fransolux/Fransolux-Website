@@ -19,7 +19,8 @@ function Navbar() {
     return;
   };
 
-  const isProjectsPage = pathname.startsWith("/proyectos");
+  const isProjectsIndex = pathname === "/proyectos";
+  const isProjectDetail = pathname.startsWith("/proyectos/");
 
   return (
     <header className={styles.header}>
@@ -52,20 +53,37 @@ function Navbar() {
         </button>
 
         <ul className={styles.navList}>
-          <li style={{ display: isProjectsPage ? "block" : "none" }}>
+          <li
+            style={{
+              display: isProjectsIndex || isProjectDetail ? "block" : "none",
+            }}
+          >
             <Link href="/">Inicio</Link>
           </li>
-          <li style={{ display: isProjectsPage ? "none" : "block" }}>
-            <a href="/proyectos">Trabajos</a>
+
+          <li
+            style={{
+              display: !isProjectsIndex ? "block" : "none",
+            }}
+          >
+            <Link href="/proyectos">Trabajos</Link>
           </li>
 
-          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+          <li
+            style={{
+              display: !isProjectsIndex && !isProjectDetail ? "block" : "none",
+            }}
+          >
             <button type="button" onClick={() => scrollFunction("servicios")}>
               Servicios
             </button>
           </li>
 
-          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+          <li
+            style={{
+              display: !isProjectsIndex && !isProjectDetail ? "block" : "none",
+            }}
+          >
             <button type="button" onClick={() => scrollFunction("sobre-mi")}>
               Sobre mi
             </button>
@@ -86,21 +104,41 @@ function Navbar() {
 
       {menuOpen && (
         <ul className={styles.dropdown}>
-          <li style={{ display: isProjectsPage ? "block" : "none" }}>
-            <Link href="/">Inicio</Link>
+          <li
+            style={{
+              display: isProjectsIndex || isProjectDetail ? "block" : "none",
+            }}
+          >
+            <Link href="/" onClick={() => setMenuOpen(false)}>
+              Inicio
+            </Link>
           </li>
 
-          <li style={{ display: isProjectsPage ? "none" : "block" }}>
-            <a href="/proyectos">Trabajos</a>
+          <li
+            style={{
+              display: !isProjectsIndex ? "block" : "none",
+            }}
+          >
+            <Link href="/proyectos" onClick={() => setMenuOpen(false)}>
+              Trabajos
+            </Link>
           </li>
 
-          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+          <li
+            style={{
+              display: !isProjectsIndex && !isProjectDetail ? "block" : "none",
+            }}
+          >
             <button type="button" onClick={() => scrollFunction("servicios")}>
               Servicios
             </button>
           </li>
 
-          <li style={{ display: isProjectsPage ? "none" : "block" }}>
+          <li
+            style={{
+              display: !isProjectsIndex && !isProjectDetail ? "block" : "none",
+            }}
+          >
             <button type="button" onClick={() => scrollFunction("sobre-mi")}>
               Sobre mi
             </button>

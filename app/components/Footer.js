@@ -1,12 +1,25 @@
 "use client";
 
 import React from "react";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
 import styles from "@/styles/modules/footer.module.css";
+
 import { scrollToSection } from "@/utils/Helpers";
 
 function Footer() {
+  const pathname = usePathname();
+
+  const isProjectsIndex = pathname === "/proyectos";
+  const isProjectDetail = pathname.startsWith("/proyectos/");
+
+  const scrollFunction = (param) => {
+    scrollToSection(param);
+  };
+
   return (
     <footer className={styles.container}>
       <div className={styles.top}>
@@ -19,22 +32,41 @@ function Footer() {
             height={32}
           />
         </Link>
+
         <ul className={styles.links}>
-          <li>
-            <a href="/proyectos">Trabajos</a>
-          </li>
+          {(isProjectsIndex || isProjectDetail) && (
+            <li>
+              <Link href="/">Inicio</Link>
+            </li>
+          )}
 
-          <li>
-            <button type="button" onClick={() => scrollToSection("servicios")}>
-              Servicios
-            </button>
-          </li>
+          {!isProjectsIndex && (
+            <li>
+              <Link href="/proyectos">Trabajos</Link>
+            </li>
+          )}
 
-          <li>
-            <button type="button" onClick={() => scrollToSection("sobre-mi")}>
-              Sobre mi
-            </button>
-          </li>
+          {!isProjectsIndex && !isProjectDetail && (
+            <>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollFunction("servicios")}
+                >
+                  Servicios
+                </button>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollFunction("sobre-mi")}
+                >
+                  Sobre mi
+                </button>
+              </li>
+            </>
+          )}
 
           <li>
             <a
@@ -47,11 +79,13 @@ function Footer() {
           </li>
         </ul>
       </div>
+
       <div className={styles.bottom}>
         <div className={styles.contact}>
           <p>+54 223 522 8237</p>
           <p>fransolux@gmail.com</p>
         </div>
+
         <span>© 2026 Fransolux</span>
       </div>
     </footer>

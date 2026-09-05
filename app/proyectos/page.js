@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import styles from "@/app/proyectos/projectsPage.module.css";
 import ImageWithLoader from "@/utils/CustomImage/CustomImage";
-import { FeaturedWorkList } from "@/utils/Projects";
+import { WorkList } from "@/utils/Projects";
 import Footer from "../components/Footer";
 import CTA from "../components/CTA";
 
@@ -15,14 +15,14 @@ function Page() {
       </div>
       <section className={styles.container}>
         <div className={styles.cards}>
-          {FeaturedWorkList.map((item, index) => {
+          {WorkList.map((item, index) => {
             return (
               <a key={index} href={`/proyectos/${item.slug}`}>
                 <ImageWithLoader
-                  src={item.image}
+                  src={item.thumbnail}
                   alt={item.alt}
-                  fill
-                  sizes="(max-width: 767px) 100vw, 33vw"
+                  width={950}
+                  height={712}
                   priority={index === 0}
                 />
               </a>

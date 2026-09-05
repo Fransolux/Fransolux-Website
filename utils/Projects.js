@@ -1,25 +1,10 @@
-export const FeaturedWorkList = [
-  {
-    slug: "grupo-esbego",
-    image: "/project-covers/cover-grupoesbego.jpg",
-    alt: "Portada de Grupo Esbego",
-  },
-  {
-    slug: "aion",
-    image: "/project-covers/cover-aion.jpg",
-    alt: "Portada de AION",
-  },
-  {
-    slug: "maf",
-    image: "/project-covers/cover-maf.jpg",
-    alt: "Portada de MAF",
-  },
-];
-
 export const WorkList = [
   {
     slug: "grupo-esbego",
-
+    cover: "/project-covers/cover-grupoesbego.jpg",
+    thumbnail: "/project-thumbnails/thumbnail-grupoesbego.jpg",
+    alt: "Portada de Grupo Esbego",
+    featured: true,
     header: {
       content: {
         title: "Grupo ESBEGO S.A",
@@ -132,6 +117,10 @@ export const WorkList = [
   },
   {
     slug: "aion",
+    cover: "/project-covers/cover-aion.jpg",
+    thumbnail: "/project-thumbnails/thumbnail-aion.jpg",
+    alt: "Portada de AION",
+    featured: true,
     header: {
       content: {
         title: "AION Studio",
@@ -159,9 +148,9 @@ export const WorkList = [
         text: "Definición de una paleta de colores y selección tipográfica orientadas a construir un lenguaje visual sólido, coherente y reconocible para AION, estableciendo las bases de su identidad.",
       },
       {
-        type: "sideBySide",
+        type: "bento",
 
-        images: [
+        top: [
           {
             src: "/projects/aion/02.jpg",
             width: 1600,
@@ -175,16 +164,15 @@ export const WorkList = [
             alt: "Gradientes de color de AION",
           },
         ],
-      },
-      {
-        type: "fullImage",
-        image: {
+
+        bottom: {
           src: "/projects/aion/04.jpg",
           width: 1600,
           height: 800,
           alt: "Tipografía de AION",
         },
       },
+
       {
         type: "explanation",
         text: "Desarrollo de un sistema iconográfico propio, compuesto por íconos diseñados específicamente para AION y pensados para integrarse de manera orgánica dentro de su plataforma digital.",
@@ -252,6 +240,10 @@ export const WorkList = [
   },
   {
     slug: "maf",
+    cover: "/project-covers/cover-maf.jpg",
+    thumbnail: "/project-thumbnails/thumbnail-maf.jpg",
+    alt: "Portada de MAF",
+    featured: true,
     header: {
       content: {
         title: "Miguel Á. Francisco",
