@@ -13,11 +13,6 @@
   justify-content: space-between;
 }
 
-.logo {
-  height: 16px;
-  width: auto;
-}
-
 .menuBtn {
   width: 32px;
   height: 32px;
@@ -25,7 +20,7 @@
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: var(--primary);
   cursor: pointer;
 }
@@ -121,11 +116,6 @@
   .dropdown {
     display: none;
   }
-
-  .logo {
-    height: 20px;
-    width: auto;
-  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -139,11 +129,6 @@
 }
 
 @media screen and (min-width: 1536px) {
-  .logo {
-    height: 24px;
-    width: auto;
-  }
-
   .navList > li > a,
   .navList > li > button {
     font-size: 20px;

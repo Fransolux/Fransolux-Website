@@ -3,7 +3,7 @@
 import React from "react";
 
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/utils/Logo/Logo";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -26,15 +26,7 @@ function Footer() {
     <>
       <footer className={styles.container}>
         <div className={styles.top}>
-          <Link href="/">
-            <Image
-              className={styles.logo}
-              src="/placeholder-logo.svg"
-              alt="Fransolux logo"
-              width={32}
-              height={32}
-            />
-          </Link>
+          <Logo accent={"var(--white)"} primary={"var(--white)"} />
 
           <ul className={styles.links}>
             {(isProjectsIndex || isProjectDetail) && (

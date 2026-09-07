@@ -60,7 +60,7 @@
 .bento > div:last-child,
 .sideBySide > div,
 .gallery > div {
-  border-radius: 16px;
+  border-radius: 2px;
   box-shadow: 0 4px 12px 0 #00000042;
   overflow: hidden;
 }

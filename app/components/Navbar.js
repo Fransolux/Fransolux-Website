@@ -9,6 +9,7 @@ import styles from "@/styles/modules/navbar.module.css";
 import ContactPopUp from "@/utils/ContactPopUp/ContactPopUp";
 
 import { scrollToSection } from "@/utils/Helpers";
+import Logo from "@/utils/Logo/Logo";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,15 +29,7 @@ function Navbar() {
     <>
       <header className={styles.header}>
         <nav className={styles.container}>
-          <Link href="/">
-            <Image
-              className={styles.logo}
-              src="/placeholder-logo.svg"
-              alt="Fransolux logo"
-              width={32}
-              height={32}
-            />
-          </Link>
+          <Logo accent={"var(--primary)"} primary={"var(--black)"} />
 
           <button
             className={styles.menuBtn}

@@ -27,7 +27,7 @@
   height: 318px;
   display: block;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 2px;
 }
 
 .cards > a > img {

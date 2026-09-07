@@ -1,0 +1,34 @@
+.variants {
+  width: max-content;
+  height: auto;
+}
+
+.mobileLogo {
+  width: 32px;
+  height: 32px;
+}
+
+.mobileLogo > svg {
+  height: 32px;
+  width: auto;
+}
+
+.desktopLogo {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobileLogo {
+    display: none;
+  }
+
+  .desktopLogo {
+    display: block;
+    height: 36px;
+  }
+
+  .desktopLogo > svg {
+    height: 36px;
+    width: auto;
+  }
+}
