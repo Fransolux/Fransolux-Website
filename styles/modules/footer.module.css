@@ -65,6 +65,10 @@
   line-height: 120%;
 }
 
+.contactLink > span {
+  display: none;
+}
+
 @media screen and (min-width: 400px) {
   .container {
     padding: 64px 32px 32px 32px;
@@ -100,6 +104,14 @@
 @media screen and (min-width: 1024px) {
   .links {
     gap: 80px;
+  }
+
+  .contactLink > a {
+    display: none;
+  }
+
+  .contactLink > span {
+    display: block;
   }
 }
 

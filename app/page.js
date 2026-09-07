@@ -7,10 +7,12 @@ import About from "./components/About";
 import WorkProcess from "./components/WorkProcess";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import ContactPopUp from "@/utils/ContactPopUp/ContactPopUp";
 
 export default function Home() {
   return (
     <main>
+      <ContactPopUp />
       <Navbar />
       <Hero />
       <FeaturedWork />

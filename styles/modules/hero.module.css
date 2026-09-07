@@ -27,7 +27,7 @@
   color: var(--black);
   line-height: 120%;
   font-weight: 900;
-  max-width: 336px;
+  max-width: 267px;
 }
 
 .text > h1 > span {
@@ -43,7 +43,7 @@
 }
 
 .mobileText {
-  max-width: 306px;
+  max-width: 290px;
 }
 
 .desktopText {
@@ -58,30 +58,41 @@
   gap: 24px;
 }
 
-@media screen and (min-width: 400px) {
-  .container {
-    padding: 80px 32px;
-  }
+.buttons > button {
+  display: none;
+}
 
+@media screen and (min-width: 350px) {
   .text > h1 {
     font-size: 36px;
   }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 400px) {
   .container {
-    padding: 128px 32px;
+    padding: 80px 32px;
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 430px) {
   .text > h1 {
-    font-size: 44px;
-    max-width: 450px;
+    font-size: 40px;
+    max-width: 300px;
   }
 
   .mobileText {
-    max-width: 400px;
+    max-width: 305px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .text > h1 {
+    font-size: 44px;
+    max-width: 350px;
+  }
+
+  .mobileText {
+    max-width: 310px;
   }
 }
 
@@ -102,7 +113,7 @@
 
   .text > h1 {
     font-size: 64px;
-    max-width: 588px;
+    max-width: 500px;
   }
 
   .mobileText {
@@ -111,7 +122,7 @@
 
   .desktopText {
     display: block;
-    max-width: 515px;
+    max-width: 450px;
   }
 
   .buttons {
@@ -129,20 +140,34 @@
     width: auto;
   }
 
+  .text {
+    align-items: center;
+  }
+
   .text > h1 {
     font-size: 72px;
-    max-width: 664px;
+    max-width: 600px;
     text-align: center;
   }
 
   .desktopText {
     text-align: center;
-    max-width: 604px;
+    max-width: 450px;
   }
 
   .buttons {
     gap: 64px;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .buttons > a:first-child {
+    display: none;
+  }
+
+  .buttons > button {
+    display: block;
   }
 }
 
@@ -168,12 +193,12 @@
 
   .text > h1 {
     font-size: 80px;
-    max-width: 740px;
+    max-width: 650px;
   }
 
   .desktopText {
     font-size: 20px;
-    max-width: 680px;
+    max-width: 550px;
   }
 
   .buttons button {
