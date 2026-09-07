@@ -83,8 +83,8 @@
 
 @media screen and (min-width: 1280px) {
   .close {
-    top: 64px;
-    right: 64px;
+    top: 32px;
+    right: 32px;
   }
 }
 

@@ -22,24 +22,23 @@ function ContactPopUp({ isOpen, onClose }) {
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.popup} role="dialog" aria-modal="true">
-        <button
-          type="button"
-          className={styles.close}
-          onClick={onClose}
-          aria-label="Cerrar"
-        >
-          <Image
-            src="/menu-cerrar.svg"
-            alt="Icono para cerrar menu"
-            width={24}
-            height={24}
-          />
-        </button>
-
         <div
           className={styles.content}
           onClick={(event) => event.stopPropagation()}
         >
+          <button
+            type="button"
+            className={styles.close}
+            onClick={onClose}
+            aria-label="Cerrar"
+          >
+            <Image
+              src="/menu-cerrar.svg"
+              alt="Icono para cerrar menu"
+              width={24}
+              height={24}
+            />
+          </button>
           <span>¡Ponte en contacto!</span>
           <ul className={styles.contact}>
             <li>
