@@ -13,8 +13,14 @@ function ProjectHeader({ project }) {
       <hr />
       <div className={styles.info}>
         <p>
-          <strong>Cliente / </strong>
-          {project.header.info.client}
+          {project.header.info.client === "Facultad" ? (
+            "Trabajo académico"
+          ) : (
+            <>
+              <strong>Cliente / </strong>
+              {project.header.info.client}
+            </>
+          )}
         </p>
 
         <p>
@@ -23,8 +29,14 @@ function ProjectHeader({ project }) {
         </p>
 
         <p>
-          <strong>Servicios / </strong>
-          {project.header.info.services.join(" - ")}
+          {project.header.info.client === "Facultad" ? (
+            <>{project.header.info.services.join(" - ")}</>
+          ) : (
+            <>
+              <strong>Servicios / </strong>
+              {project.header.info.services.join(" - ")}
+            </>
+          )}
         </p>
       </div>
     </header>

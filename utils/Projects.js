@@ -239,11 +239,175 @@ export const WorkList = [
     ],
   },
   {
+    slug: "la-ola",
+    cover: "/project-covers/cover-laola.jpg",
+    thumbnail: "/project-thumbnails/thumbnail-laola.jpg",
+    alt: "Portada de La Ola",
+    featured: true,
+    header: {
+      content: {
+        title: "La Ola",
+        text: "Trabajo académico centrado en desarrolar la identidad visual de una marca, incluyendo el diseño del isologotipo, selección tipográfica, paleta de colores y distintas aplicaciones.",
+      },
+
+      info: {
+        client: "Facultad",
+        year: "2026",
+        services: ["Diseño gráfico", "Identidad visual", "Logos", "Editorial"],
+      },
+    },
+    sections: [
+      {
+        type: "fullImage",
+        image: {
+          src: "/projects/la-ola/01.jpg",
+          width: 1600,
+          height: 800,
+          alt: "Portada sitio web La Ola",
+        },
+      },
+
+      {
+        type: "explanation",
+        text: "Se presenta el funcionamiento de la marca en blanco y negro, junto con la disposición del isologotipo para distintos usos y aplicaciones.",
+      },
+
+      {
+        type: "bento",
+
+        top: [
+          {
+            src: "/projects/la-ola/02.jpg",
+            width: 1600,
+            height: 534,
+            alt: "Isologotipo La Ola positvo",
+          },
+          {
+            src: "/projects/la-ola/03.jpg",
+            width: 1600,
+            height: 534,
+            alt: "Isologotipo La Ola negativo",
+          },
+        ],
+
+        bottom: {
+          src: "/projects/la-ola/04.jpg",
+          width: 1600,
+          height: 800,
+          alt: "Isologotipo La Ola locomotora",
+        },
+      },
+
+      {
+        type: "explanation",
+        text: "La marca fue construida sobre una grilla que define sus proporciones y asegura un resultado equilibrado y consistente en cualquier tamaño.",
+      },
+      {
+        type: "fullImage",
+        image: {
+          src: "/projects/la-ola/06.gif",
+          width: 1600,
+          height: 800,
+          alt: "Grilla de construcción de La Ola",
+        },
+      },
+      {
+        type: "explanation",
+        text: "La identidad de La Ola se compone de una paleta de colores definida para mantener una aplicación consistente de la marca.",
+      },
+      {
+        type: "fullImage",
+        image: {
+          src: "/projects/la-ola/07.jpg",
+          width: 1600,
+          height: 800,
+          alt: "Colores de La Ola",
+        },
+      },
+      {
+        type: "explanation",
+        text: "La tipografía principal de La Ola es Roboto, elegida por su legibilidad, versatilidad y facilidad de adaptación a distintos formatos.",
+      },
+      {
+        type: "fullImage",
+        image: {
+          src: "/projects/la-ola/08.jpg",
+          width: 1600,
+          height: 800,
+          alt: "Tipografía de La Ola",
+        },
+      },
+      {
+        type: "explanation",
+        text: "Se presentan distintas aplicaciones de la marca para mostrar cómo se adapta a diferentes piezas y mantiene una identidad consistente.",
+      },
+      {
+        type: "gallery",
+
+        images: [
+          {
+            src: "/projects/la-ola/09.jpg",
+            width: 800,
+            height: 800,
+            alt: "Aplicaciones de La Ola",
+          },
+          {
+            src: "/projects/la-ola/10.jpg",
+            width: 800,
+            height: 800,
+            alt: "Aplicaciones de La Ola",
+          },
+          {
+            src: "/projects/la-ola/11.jpg",
+            width: 800,
+            height: 800,
+            alt: "Aplicaciones de La Ola",
+          },
+        ],
+      },
+      {
+        type: "explanation",
+        text: "También se diseñaron tarjetas corporativas con los datos de la marca, que posteriormente fueron impresas y cortadas.",
+      },
+      {
+        type: "sideBySide",
+
+        images: [
+          {
+            src: "/projects/la-ola/12.jpg",
+            width: 1600,
+            height: 534,
+            alt: "Tarjetas personales de La Ola",
+          },
+          {
+            src: "/projects/la-ola/13.jpg",
+            width: 1600,
+            height: 534,
+            alt: "Tarjetas personales de La Ola",
+          },
+        ],
+      },
+      {
+        type: "explanation",
+        text: "Como parte de la identidad, también se diseñaron piezas para Instagram adaptadas al lenguaje visual de la marca.",
+      },
+      {
+        type: "fullImage",
+        image: {
+          src: "/projects/la-ola/14.jpg",
+          width: 1600,
+          height: 800,
+          alt: "Posts Instagram de La Ola",
+        },
+      },
+    ],
+  },
+  {
     slug: "maf",
     cover: "/project-covers/cover-maf.jpg",
     thumbnail: "/project-thumbnails/thumbnail-maf.jpg",
     alt: "Portada de MAF",
-    featured: true,
+    featured: false,
     header: {
       content: {
         title: "Miguel Á. Francisco",
