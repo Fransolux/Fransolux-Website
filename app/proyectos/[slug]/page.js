@@ -6,6 +6,7 @@ import ProjectRenderer from "@/utils/ProjectRender/ProjectRender";
 import Navbar from "@/app/components/Navbar";
 import CTA from "@/app/components/CTA";
 import Footer from "@/app/components/Footer";
+import NextProjects from "@/app/components/NextProject";
 
 export function generateStaticParams() {
   return WorkList.map((project) => ({
@@ -41,6 +42,7 @@ async function ProjectPage({ params }) {
     <main>
       <Navbar />
       <ProjectRenderer project={project} />
+      <NextProjects currentSlug={slug} />
       <CTA />
       <Footer />
     </main>
