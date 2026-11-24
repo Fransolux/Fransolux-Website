@@ -58,11 +58,13 @@
 }
 
 .contact > p,
+.contact > a,
 .bottom > span {
   font-size: 16px;
   color: var(--white);
   font-weight: 400;
   line-height: 120%;
+  text-decoration: none;
 }
 
 .contactLink > span {
@@ -127,6 +129,7 @@
   }
 
   .contact > p,
+  .contact > a,
   .bottom > span,
   .links > li > button,
   .links > li > a {

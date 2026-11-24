@@ -64,13 +64,6 @@ function Footer() {
             )}
 
             <li className={styles.contactLink}>
-              <a
-                href="https://shorturl.at/RaB2f"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contactame
-              </a>
               <span
                 className="secondary-cta"
                 type="button"
@@ -84,7 +77,12 @@ function Footer() {
 
         <div className={styles.bottom}>
           <div className={styles.contact}>
-            <p>+54 223 522 8237</p>
+            <a href="https://www.tiktok.com/@fransolux" target="_blank">
+              TikTok
+            </a>
+            <a href="https://www.instagram.com/fransolux/" target="_blank">
+              Instagram
+            </a>
             <p>fransolux@gmail.com</p>
           </div>
 

@@ -42,8 +42,8 @@ async function ProjectPage({ params }) {
     <main>
       <Navbar />
       <ProjectRenderer project={project} />
-      <NextProjects currentSlug={slug} />
       <CTA />
+      <NextProjects currentSlug={slug} />
       <Footer />
     </main>
   );

@@ -1,43 +1,50 @@
 import styles from "@/utils/ProjectRender/projectrender.module.css";
-
 import ImageWithLoader from "@/utils/CustomImage/CustomImage";
+import SlideShow from "@/utils/ProjectRender/SlideShow";
 
 function ProjectHeader({ project }) {
+  const { client, year, services } = project.header.info;
+
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <h1>{project.header.content.title}</h1>
-
         <p>{project.header.content.text}</p>
       </div>
       <hr />
       <div className={styles.info}>
-        <p>
-          {project.header.info.client === "Facultad" ? (
-            "Trabajo académico"
-          ) : (
-            <>
-              <strong>Cliente / </strong>
-              {project.header.info.client}
-            </>
-          )}
-        </p>
+        {client && (
+          <p>
+            {client === "Facultad" ? (
+              "Trabajo académico"
+            ) : (
+              <>
+                <strong>Cliente / </strong>
+                {client}
+              </>
+            )}
+          </p>
+        )}
 
-        <p>
-          <strong>Año / </strong>
-          {project.header.info.year}
-        </p>
+        {year && (
+          <p>
+            <strong>Año / </strong>
+            {year}
+          </p>
+        )}
 
-        <p>
-          {project.header.info.client === "Facultad" ? (
-            <>{project.header.info.services.join(" - ")}</>
-          ) : (
-            <>
-              <strong>Servicios / </strong>
-              {project.header.info.services.join(" - ")}
-            </>
-          )}
-        </p>
+        {services?.length > 0 && (
+          <p>
+            {client === "Facultad" ? (
+              services.join(" - ")
+            ) : (
+              <>
+                <strong>Servicios / </strong>
+                {services.join(" - ")}
+              </>
+            )}
+          </p>
+        )}
       </div>
     </header>
   );
@@ -129,6 +136,45 @@ function Gallery({ images }) {
   );
 }
 
+function ShowProcess({ result, process }) {
+  return (
+    <section className={styles.processBand}>
+      <div className={styles.showProcess}>
+        {[result, process].map((image, index) => (
+          <div
+            key={index}
+            className={styles.processItem}
+            style={{ "--ratio": image.width / image.height }}
+          >
+            <ImageWithLoader
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Grid({ images }) {
+  return (
+    <section className={styles.postGrid}>
+      {images.map((image, index) => (
+        <ImageWithLoader
+          key={index}
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
+      ))}
+    </section>
+  );
+}
+
 function ProjectRenderer({ project }) {
   return (
     <div className={styles.container}>
@@ -156,6 +202,27 @@ function ProjectRenderer({ project }) {
 
             case "gallery":
               return <Gallery key={index} images={section.images} />;
+
+            case "showProcess":
+              return (
+                <ShowProcess
+                  key={index}
+                  result={section.result}
+                  process={section.process}
+                />
+              );
+
+            case "grid":
+              return <Grid key={index} images={section.images} />;
+
+            case "slideShow":
+              return (
+                <SlideShow
+                  key={index}
+                  images={section.images}
+                  speed={section.speed}
+                />
+              );
 
             default:
               return null;

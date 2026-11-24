@@ -1,3 +1,5 @@
+import { folderImages } from "./folderImage";
+
 export const WorkList = [
   {
     slug: "grupo-esbego",
@@ -479,6 +481,88 @@ export const WorkList = [
             alt: "Sección bibliografía sitio web MAF",
           },
         ],
+      },
+    ],
+  },
+  {
+    slug: "social-media",
+    cover: "/project-covers/cover-socialmedia.jpg",
+    thumbnail: "/project-thumbnails/thumbnail-socialmedia.jpg",
+    alt: "Portada de Social Media",
+    featured: false,
+    header: {
+      content: {
+        title: "Social media",
+        text: "Selección de piezas para redes sociales: posts, carruseles y demás. Trabajos propios y de clientes, pensados para comunicar con claridad y sostener una identidad.",
+      },
+
+      info: {
+        year: "2026",
+        services: ["Redes Sociales", "Diseño Gráfico"],
+      },
+    },
+    sections: [
+      {
+        type: "fullImage",
+        image: {
+          src: "/projects/social-media/hero-image.jpg",
+          width: 1600,
+          height: 800,
+          alt: "Portada Social Media",
+        },
+      },
+      {
+        type: "explanation",
+        text: "En redes sociales, la consistencia visual es lo que hace que una marca se reconozca. Colores, tipografías y composiciones que se repiten construyen identidad, publicación tras publicación.",
+      },
+      {
+        type: "grid",
+        images: folderImages("projects/social-media/tecno-template", {
+          alt: "Instagram Post",
+        }),
+      },
+
+      {
+        type: "showProcess",
+        result: {
+          src: "/projects/social-media/colapinto-lasvegas/post01.jpg",
+          width: 1080,
+          height: 1440,
+          alt: "Post final para Instagram",
+        },
+        process: {
+          src: "/projects/social-media/colapinto-lasvegas/post02.gif",
+          width: 1080,
+          height: 1440,
+          alt: "Proceso de creación del post",
+        },
+      },
+      {
+        type: "grid",
+        images: folderImages("projects/social-media/la-ola", {
+          alt: "Instagram Post",
+        }),
+      },
+      {
+        type: "explanation",
+        text: "Los carruseles permiten contar más en una sola publicación una idea que se desarrolla slide a slide, con ritmo y jerarquía, e invita a quedarse un poco más.",
+      },
+      {
+        type: "slideShow",
+        speed: 60,
+        images: folderImages("projects/social-media/carrusel-gym", {
+          alt: "Carrusel Gimnasio",
+        }),
+      },
+      {
+        type: "explanation",
+        text: "Piezas de distintos rubros y estilos, ejercicios y trabajos que demuestran mi capacidad de adaptación a lo que la situación requiera.",
+      },
+      {
+        type: "grid",
+        images: folderImages("projects/social-media/random-posts", {
+          alt: "Instagram Post",
+        }),
       },
     ],
   },

@@ -42,7 +42,8 @@ function ContactPopUp({ isOpen, onClose }) {
           <span>¡Ponte en contacto!</span>
           <ul className={styles.contact}>
             <li>
-              <span>Teléfono: </span>+54 9 223 522 8237
+              Puedes contactarte conmigo por mail o cualquiera de los metodos a
+              continuación.
             </li>
             <li>
               <span>Email: </span>fransolux@gmail.com
@@ -50,18 +51,25 @@ function ContactPopUp({ isOpen, onClose }) {
           </ul>
           <div className={styles.buttons}>
             <a
-              href="https://shorturl.at/RaB2f"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WhatsApp
-            </a>
-            <a
               href="https://www.linkedin.com/in/espinosa-franco/"
               target="_blank"
               rel="noopener noreferrer"
             >
               LinkedIn
+            </a>
+            <a
+              href="https://www.tiktok.com/@fransolux"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TikTok
+            </a>
+            <a
+              href="https://www.instagram.com/fransolux/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
             </a>
           </div>
         </div>
