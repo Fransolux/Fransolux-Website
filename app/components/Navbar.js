@@ -144,14 +144,12 @@ function Navbar() {
             </li>
 
             <li>
-              <a
-                href="https://shorturl.at/RaB2f"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => scrollFunction("footer")}
                 className="primary-cta"
               >
                 Contactame
-              </a>
+              </button>
             </li>
           </ul>
         )}

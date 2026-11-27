@@ -5,9 +5,13 @@ import styles from "@/utils/Logo/logo.module.css";
 import Link from "next/link";
 
 function Logo({ accent, primary }) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={styles.variants}>
-      <Link href="/" className={styles.mobileLogo}>
+      <Link href="/" className={styles.mobileLogo} onClick={scrollToTop}>
         <svg
           width="100%"
           height="100%"
@@ -23,7 +27,7 @@ function Logo({ accent, primary }) {
         </svg>
       </Link>
 
-      <Link href="/" className={styles.desktopLogo}>
+      <Link href="/" className={styles.desktopLogo} onClick={scrollToTop}>
         <svg
           width="100%"
           height="100%"

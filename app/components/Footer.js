@@ -24,7 +24,7 @@ function Footer() {
 
   return (
     <>
-      <footer className={styles.container}>
+      <footer className={styles.container} id="footer">
         <div className={styles.top}>
           <Logo accent={"var(--white)"} primary={"var(--white)"} />
 

@@ -3,11 +3,16 @@
 import React from "react";
 import { useState } from "react";
 import styles from "@/styles/modules/cta.module.css";
-
+import { scrollToSection } from "@/utils/Helpers";
 import ContactPopUp from "@/utils/ContactPopUp/ContactPopUp";
 
 function CTA() {
   const [popupOpen, setPopupOpen] = useState(false);
+
+  const scrollFunction = (param) => {
+    scrollToSection(param);
+    return;
+  };
 
   return (
     <>
@@ -20,13 +25,13 @@ function CTA() {
               represente lo que querés construir, comunicar y alcanzar.
             </p>
           </div>
-          <a
-            href="https://shorturl.at/RaB2f"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => {
+              scrollFunction("footer");
+            }}
           >
             PONTE EN CONTACTO
-          </a>
+          </button>
           <button type="button" onClick={() => setPopupOpen(true)}>
             PONTE EN CONTACTO
           </button>

@@ -58,6 +58,7 @@ function FullImage({ image }) {
         alt={image.alt}
         width={image.width}
         height={image.height}
+        mobile={image.mobile}
       />
     </section>
   );

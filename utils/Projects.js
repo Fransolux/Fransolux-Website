@@ -19,18 +19,21 @@ export const WorkList = [
         services: ["Sitio web", "Identidad visual", "Diseño gráfico"],
       },
     },
-
     sections: [
       {
         type: "fullImage",
         image: {
-          src: "/projects/grupo-esbego/Esbego-01.jpg",
+          src: "/projects/grupo-esbego/hero-desktop-image.jpg",
           width: 1600,
           height: 800,
-          alt: "Sitio web de Grupo ESBEGO",
+          alt: "Portada Grupo Esbego",
+          mobile: {
+            src: "/projects/grupo-esbego/hero-mobile-image.jpg",
+            width: 800,
+            height: 1600,
+          },
         },
       },
-
       {
         type: "explanation",
         text: "El proyecto comenzó con la necesidad de construir una presencia más sólida y coherente para ESBEGO. A partir de su identidad existente, trabajé en simplificar y ordenar los elementos visuales de la marca para establecer una dirección más clara, profesional y adaptable a distintos medios.",
@@ -139,10 +142,15 @@ export const WorkList = [
       {
         type: "fullImage",
         image: {
-          src: "/projects/aion/01.jpg",
+          src: "/projects/aion/hero-desktop-image.jpg",
           width: 1600,
           height: 800,
-          alt: "Logotipo de AION",
+          alt: "Portada Aion",
+          mobile: {
+            src: "/projects/aion/hero-mobile-image.jpg",
+            width: 800,
+            height: 1600,
+          },
         },
       },
       {
@@ -262,13 +270,17 @@ export const WorkList = [
       {
         type: "fullImage",
         image: {
-          src: "/projects/la-ola/01.jpg",
+          src: "/projects/la-ola/hero-desktop-image.jpg",
           width: 1600,
           height: 800,
-          alt: "Portada sitio web La Ola",
+          alt: "Portada La Ola",
+          mobile: {
+            src: "/projects/la-ola/hero-mobile-image.jpg",
+            width: 800,
+            height: 1600,
+          },
         },
       },
-
       {
         type: "explanation",
         text: "Se presenta el funcionamiento de la marca en blanco y negro, junto con la disposición del isologotipo para distintos usos y aplicaciones.",
@@ -426,10 +438,15 @@ export const WorkList = [
       {
         type: "fullImage",
         image: {
-          src: "/projects/maf/01.jpg",
+          src: "/projects/maf/hero-desktop-image.jpg",
           width: 1600,
           height: 800,
-          alt: "Portada sitio web MAF",
+          alt: "Portada MAF",
+          mobile: {
+            src: "/projects/maf/hero-mobile-image.jpg",
+            width: 800,
+            height: 1600,
+          },
         },
       },
       {
@@ -505,10 +522,15 @@ export const WorkList = [
       {
         type: "fullImage",
         image: {
-          src: "/projects/social-media/hero-image.jpg",
+          src: "/projects/social-media/hero-desktop-image.jpg",
           width: 1600,
           height: 800,
           alt: "Portada Social Media",
+          mobile: {
+            src: "/projects/social-media/hero-mobile-image.jpg",
+            width: 800,
+            height: 1600,
+          },
         },
       },
       {

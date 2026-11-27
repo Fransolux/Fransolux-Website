@@ -54,9 +54,18 @@
   cursor: pointer;
 }
 
-.dropdown li:last-child a {
-  color: var(--white);
+.dropdown li:last-child button {
+  border: none;
   width: max-content;
+  border-radius: 2px;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 120%;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--primary);
 }
 
 .dropdown button {

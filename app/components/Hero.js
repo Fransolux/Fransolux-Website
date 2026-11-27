@@ -6,12 +6,18 @@ import styles from "@/styles/modules/hero.module.css";
 import ContactPopUp from "@/utils/ContactPopUp/ContactPopUp";
 import Link from "next/link";
 
+import { scrollToSection } from "@/utils/Helpers";
+
 function Hero() {
   const [popupOpen, setPopupOpen] = useState(false);
 
+  const scrollFunction = (param) => {
+    scrollToSection(param);
+  };
+
   return (
     <>
-      <section className={styles.container}>
+      <section className={styles.container} id="inicio">
         <div className={styles.content}>
           <div className={styles.text}>
             <h1>DISEÑOS PARA TU NEGOCIO</h1>
@@ -25,14 +31,13 @@ function Hero() {
             </p>
           </div>
           <div className={styles.buttons}>
-            <a
-              href="https://shorturl.at/RaB2f"
-              target="_blank"
+            <button
               rel="noopener noreferrer"
               className="primary-cta"
+              onClick={() => scrollFunction("footer")}
             >
               Trabajemos juntos
-            </a>
+            </button>
             <button
               className="primary-cta"
               type="button"
